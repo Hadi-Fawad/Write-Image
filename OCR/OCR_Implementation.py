@@ -1,12 +1,12 @@
 import easyocr
 import matplotlib.pyplot as plt
-from cv2 import cv2
+import cv2
 import time
 import numpy as np
-a
+
 reader = easyocr.Reader(['en'], gpu=True)
 # Control Test
-vid = cv2.VideoCapture("numplate.mp4")
+vid = cv2.VideoCapture("video.mp4")
 # For Video Capture
 # vid = cv2.VideoCapture(0)
 skip_frame = True
@@ -34,4 +34,6 @@ while True:
         break
     print(fps)
     print(text)
+
+
 
