@@ -6,14 +6,20 @@ import numpy as np
 import os
 import openai
 
+# ------------------------------------------------ #
+# ---------EASYOCR Image Recognition-------------- #
+# ------------------------------------------------ #
 
+# True value set to GPU since easyocr performs quicker with a GPU
 reader = easyocr.Reader(['en'], gpu=True)
 # Control Test
 vid = cv2.VideoCapture("numplate.mp4")
 # For Video Capture
 # vid = cv2.VideoCapture(0)
 skip_frame = True
- 
+
+# Read image segment
+# Chosen font will be changed to something more appealing
 while True:
     a = time.time()
     ret, img = vid.read()
@@ -35,19 +41,27 @@ while True:
 
     if cv2.waitKey(1000) & 0XFF == ord('q'):
         break
+# Output the FPS and recognized Text
     print(fps)
     print(text)
 
+# ------------------------------------------------ #
+# ---------DALL E 2 Image Generation-------------- #
+# ------------------------------------------------ #
 
+# ApiKey taken from OpenAI website, this key has been deleted
 apickey = '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'
 
+# Set apikey to following value
+# List the model, we can choose which AI Model to use, 4 to choose from
+# Create Image with parameters
+# Reference Documentation at: https://beta.openai.com/docs/api-reference/images/create?lang=python
 openai.api_key = apickey
 openai.Model.list()
 openai.Image.create(
   prompt=text,
   n=2,
   size="1024x1024"
-
 )
 
 
