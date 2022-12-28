@@ -5,6 +5,7 @@ import time
 import numpy as np
 import os
 import openai
+import key
 
 # ------------------------------------------------ #
 # ---------EASYOCR Image Recognition-------------- #
@@ -50,13 +51,12 @@ cv2.imshow("result", img)
 # ------------------------------------------------ #
 print(text)
 # ApiKey taken from OpenAI website, this key has been deleted
-apickey = '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'
 
 # Set apikey to following value
 # List the model, we can choose which AI Model to use, 4 to choose from
 # Create Image with parameters
 # Reference Documentation at: https://beta.openai.com/docs/api-reference/images/create?lang=python
-openai.api_key = apickey
+openai.api_key = key.API_KEY
 openai.Model.list()
 object = openai.Image.create(
   prompt= text,
