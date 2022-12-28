@@ -50,7 +50,7 @@ cv2.imshow("result", img)
 # ------------------------------------------------ #
 print(text)
 # ApiKey taken from OpenAI website, this key has been deleted
-apickey = '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'
+apickey = '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'
 
 # Set apikey to following value
 # List the model, we can choose which AI Model to use, 4 to choose from
@@ -63,6 +63,8 @@ object = openai.Image.create(
   n=1,
   size="1024x1024"
 )
+
+# This is a new comment
 
 print(object)
 
