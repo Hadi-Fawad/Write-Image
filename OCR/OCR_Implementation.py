@@ -6,6 +6,7 @@ import numpy as np
 import os
 import openai
 import key
+import webbrowser
 
 # ------------------------------------------------ #
 # ---------EASYOCR Image Recognition-------------- #
@@ -58,14 +59,13 @@ print(text)
 # Reference Documentation at: https://beta.openai.com/docs/api-reference/images/create?lang=python
 openai.api_key = key.API_KEY
 openai.Model.list()
-object = openai.Image.create(
+response = openai.Image.create(
   prompt= text,
   n=1,
   size="1024x1024"
 )
 
-# This is a new comment
-
-print(object)
+image_url = response['data'][0]['url']
+webbrowser.open(image_url)
 
 
