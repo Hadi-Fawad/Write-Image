@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1218de06-f9fb-4a63-989d-df98d5dc9589" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OCR/OCR_Implementation.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCR/OCR_Implementation.py" afterDir="false" />
     </list>
@@ -32,8 +33,9 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-<component name="RecentsManager">
+  <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lydia\Desktop\AI_Symposium_2023\Write-Image" />
       <recent name="C:\Users\lydia\Desktop\AI_Symposium_2023\Write-Image\OCR" />
     </key>
   </component>
