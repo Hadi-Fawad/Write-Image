@@ -1,3 +1,4 @@
-key.py
+const.py
 .idea/
 OCR/__pycache__/
+OCR/test1.jpg
